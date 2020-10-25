@@ -9,16 +9,17 @@ on:
 jobs:
   client-checks:
     runs-on: ubuntu-latest
+    
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
+      - working-directory: ./pwa
       - uses: actions/checkout@v2
 
-      - name: CD to PWA Directoy
-        run: cd pwa
-
+      - run: pwd
+        
       - name: Install Dependencies
         run: yarn install
 
