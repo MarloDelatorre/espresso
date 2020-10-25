@@ -16,7 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - working-directory: pwa
 
       - name: Print Working Directory
         run: pwd
