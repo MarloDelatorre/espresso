@@ -15,10 +15,11 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - working-directory: pwa
       - uses: actions/checkout@v2
+      - working-directory: pwa
 
-      - run: pwd
+      - name: Print Working Directory
+        run: pwd
         
       - name: Install Dependencies
         run: yarn install
