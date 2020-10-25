@@ -19,9 +19,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Print Working Directory
-        run: pwd
         
       - name: Install Dependencies
         run: yarn install
