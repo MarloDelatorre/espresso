@@ -14,10 +14,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Yarn
-        run: npm install -g yarn
+      - uses: actions/checkout@v
 
       - name: CD to PWA Directoy
         run: cd pwa
