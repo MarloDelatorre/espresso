@@ -21,3 +21,15 @@ jobs:
 
       - name: Install Dependencies
         run: yarn install
+
+      - name: TypeScript Check
+        run: yarn tsc
+
+      - name: Format Check
+        run: yarn format:check
+
+      - name: Linter Check
+        run: yarn lint
+
+      - name: Unit Tests
+        run: yarn test
