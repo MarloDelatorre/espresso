@@ -5,9 +5,9 @@
     "start": "webpack && http-server dist",
     "tsc": "tsc",
     "test": "jest",
-    "format:write": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "eslint ."
+    "format:write": "prettier --write ./src",
+    "format:check": "prettier --check ./src",
+    "lint": "eslint ./src"
   },
   "author": "Marlo Delatorre",
   "license": "MIT",

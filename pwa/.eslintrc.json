@@ -16,5 +16,8 @@
       "pragma": "React",
       "version": "detect"
     }
+  },
+  "env": {
+    "jest": true
   }
 }
