@@ -1,0 +1,39 @@
+name: CI Checks
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs: 
+  client-checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: pwa
+        
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print Working Directory
+        run: pwd
+        
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: TypeScript Check
+        run: yarn tsc
+
+      - name: Format Check
+        run: yarn format:check
+
+      - name: Linter Check
+        run: yarn lint
+
+      - name: Unit Tests
+        run: yarn test
